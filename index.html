@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Healthcare AI App</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <h1>Healthcare AI App</h1>
+    <div>
+        <h2>Generate Synthetic Medical Data</h2>
+        <form action="/generate" method="POST">
+            <label for="num_records">Number of Records:</label>
+            <input type="number" id="num_records" name="num_records" min="1" max="100" required>
+            <button type="submit">Generate Data</button>
+        </form>
+    </div>
+    <div>
+        <h2>Symptom-to-Diagnosis Predictor</h2>
+        <form action="/diagnosis" method="POST">
+            <label for="symptoms">Enter Symptoms:</label>
+            <input type="text" id="symptoms" name="symptoms" required>
+            <button type="submit">Get Diagnosis</button>
+        </form>
+    </div>
+</body>
+</html>
